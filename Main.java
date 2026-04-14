@@ -4,14 +4,15 @@ public class Main {
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
         System.out.print("Digite sua frase: ");
-        String frase = ler.nextLine;
+        String frase = ler.nextLine();
 
         String removida = remover(frase);
+        String cifrada = cifrar(removida, 5);
         System.out.println(removida);
     }
 
 
-    static String remover(frase) {
+    static String remover(String frase) {
         frase = frase.toUpperCase();
         frase = frase.replace(" ", "");
         frase = frase.replace(".", "");
@@ -20,6 +21,7 @@ public class Main {
         frase = frase.replace("?", "");
         frase = frase.replace(":", "");
         frase = frase.replace("-", "");
+        frase = frase.replace("_", "");
         frase = frase.replace("Á", "A");
         frase = frase.replace("É", "E");
         frase = frase.replace("Í", "I");
@@ -28,5 +30,14 @@ public class Main {
         frase = frase.replace("Ç", "C");
         frase = frase.replace("Ã", "A");    
         return frase;    
+    }
+    static String cifrar(String removida, int pular) {
+        tamanho = removida.length();
+        char[] resultado = new char[tamanho];
+        int sla = 0;
+
+        for (int i = 0; i < tamanho; i++) {
+            resultado[i]
+        }
     }
 }
