@@ -8,7 +8,7 @@ public class Main {
 
         String removida = remover(frase);
         String cifrada = cifrar(removida, 5);
-        System.out.println(removida);
+        System.out.println(cifrada);
     }
 
 
@@ -22,6 +22,7 @@ public class Main {
         frase = frase.replace(":", "");
         frase = frase.replace("-", "");
         frase = frase.replace("_", "");
+        frase = frase.replace("!", "");
         frase = frase.replace("Á", "A");
         frase = frase.replace("É", "E");
         frase = frase.replace("Í", "I");
@@ -32,12 +33,14 @@ public class Main {
         return frase;    
     }
     static String cifrar(String removida, int pular) {
-        tamanho = removida.length();
+        int tamanho = removida.length();
         char[] resultado = new char[tamanho];
         int sla = 0;
 
         for (int i = 0; i < tamanho; i++) {
-            resultado[i]
+            resultado[i] = removida.charAt(sla);
+            sla = (sla + pular) % tamanho;
         }
+        return new String (resultado);
     }
 }
