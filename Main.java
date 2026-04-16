@@ -7,7 +7,7 @@ public class Main {
         String frase = ler.nextLine();
 
         String removida = remover(frase);
-        String cifrada = cifrar(removida, 5);
+        String cifrada = cifrar(removida, 3);
         System.out.println(cifrada);
     }
 
@@ -43,4 +43,20 @@ public class Main {
         }
         return new String (resultado);
     }
+
+    static String decifrar() {
+
+    }
+
+    static String espaco(String frase) {
+        int[] posicao;
+        int heber = frase.length();
+
+        for (int y = 0; y < heber; y++) {
+            if () {
+
+            }
+        }
+    }
+
 }
